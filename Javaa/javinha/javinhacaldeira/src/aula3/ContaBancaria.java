@@ -1,6 +1,7 @@
 package src.aula3;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
 
 //Exercico 01 Aula 03
 public class ContaBancaria {
@@ -13,11 +14,26 @@ public class ContaBancaria {
     private double saldo;
     private int horaAtual;
 
+
     public static void main(String[] args) {
-        String datetime = DateTimeFormatter.ofPattern("MMM DD YYYY, HH:MM:SS A")
+        Scanner scan = new Scanner(System.in);
+        String datetime = DateTimeFormatter.ofPattern("MM DD YYYY, HH:MM:SS A")
                 .format(LocalDateTime.now());
+
+
     }
 
+    public void Conta(String nome, int idConta, String cpf, String banco,
+    String endereco, double saldo, int horaAtual){
+        this.nome=nome;
+        this.idConta=idConta;
+        this.cpf=cpf;
+        this.banco=banco;
+        this.endereco=endereco;
+        this.saldo=saldo;
+        this.horaAtual=horaAtual;
+
+    }
     public void saque(double valor) {
         if (this.saldo >= valor) {
             this.saldo -= valor;
@@ -46,7 +62,7 @@ public class ContaBancaria {
     System.out.println("Saldo atual é: " + saldo);
     }
 
-    public void verificarHorario(){
+    public void setHoraAtual(){
     }
     public void verificarInformacoes(){
 
