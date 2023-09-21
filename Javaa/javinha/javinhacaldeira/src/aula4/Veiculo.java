@@ -1,7 +1,7 @@
 package src.aula4;
 
 
-public class Veiculo {
+public abstract class Veiculo {
 
     String marca;
     String modelo;
@@ -23,27 +23,4 @@ public class Veiculo {
     public  abstract double calcularCustoViagem(int distancia);
 }
 
-    public class Carro extends Veiculo{
-    public Carro(String marca, String modelo, int ano) {
-        super(marca, modelo, ano);
-    }
-
-    @Override
-    public double calcularCustoViagem(int distancia) {
-        return distancia * 0.20;
-    }
-}
-
-    public class Moto extends Veiculo{
-        public Moto(String marca, String modelo, int ano){
-            super(marca, modelo, ano);
-        }
-
-        @Override
-        public double calcularCustoViagem(int distancia) {
-            return distancia * 0.15;
-        }
-    }
-//@Override” é uma “annotation” que pode ser acrescentada a um método que foi sobreposto.
-//é necessário para estender ou modificar a implementação abstrata. fonts: google
 
