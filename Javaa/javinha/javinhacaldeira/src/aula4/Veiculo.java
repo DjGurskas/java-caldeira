@@ -1,6 +1,6 @@
 package src.aula4;
 
-
+//Exercício 01: Veículo aula 04
 public abstract class Veiculo {
 
     String marca;
