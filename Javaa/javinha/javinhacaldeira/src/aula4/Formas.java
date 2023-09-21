@@ -4,6 +4,8 @@ import java.util.List;
 
 
 //Exercício 02: Figuras geométricas Aula04
+
+//reformatar o codigo
 public abstract class Formas{
     public abstract double calcularArea();
 
