@@ -49,6 +49,7 @@ public class ContaBancaria {
     }
 
     public void deposito(double valor) {
+
         this.saldo = saldo + valor;
     }
 
@@ -79,6 +80,7 @@ public class ContaBancaria {
     }
 
     public void verificarSaldo() {
+
         System.out.println("Saldo atual é: " + saldo);
     }
 
