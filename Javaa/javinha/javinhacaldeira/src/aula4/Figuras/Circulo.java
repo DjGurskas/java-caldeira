@@ -1,4 +1,4 @@
-package src.aula4;
+package src.aula4.Figuras;
 
 //Exercício 02: Figuras geométricas Aula04
 class Circulo extends Formas {

@@ -1,4 +1,4 @@
-package src.aula4;
+package src.aula4.Veiculos;
 
 //Exercício 01: Veículo aula 04
 public class Carro extends Veiculo {

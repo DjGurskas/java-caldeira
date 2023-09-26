@@ -1,4 +1,4 @@
-package src.aula4;
+package src.aula4.Figuras;
 import java.util.ArrayList;
 import java.util.List;
 

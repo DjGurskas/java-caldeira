@@ -1,26 +1,65 @@
 package src.aula4.Tributacao;
 
+interface Tributavel {
+    double calculaTributos();
+}
+
+//hierarquia das classes
 public class Conta {
-    private double saldo;
+    public double saldo;
 
     public void sacar(double valor){
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-        } else {
-            System.out.println("Error: Saldo insuficiente!");
-        }
-        System.out.println("Saldo atual: " + saldo);
-    }
 
+        saldo -= valor;
+    }
     public void depositar(double valor){
-        this.saldo = saldo + valor;
+
+        saldo += valor;
+    }
+    public double obterSaldo(){
+
+        return saldo;
+    }
+}
+
+class Corrente extends Conta implements Tributavel {
+    @Override
+    public double calculaTributos() {
+        return getSaldo() * 0.01;
     }
 
-    public void obterSaldo(){
-        System.out.println("Saldo atual é: " + saldo);
-
+    public double getSaldo() {
+        return saldo;
     }
 
 
+    class Poupanca extends Conta implements Tributavel {
+        @Override
+        public double calculaTributos() {
+            return 0;
+        }
+
+        class ImpostoDeRenda {
+            private double totalTributos = 0;
+
+            public void adicao(Tributavel tributavel) {
+                totalTributos += tributavel.calculaTributos();
+            }
+
+            //calculaTributos() vai retornar o valor dos tributos para
+            // cada classe que foi implementada a interface.
+            public double getTotalTributos() {
+                return totalTributos;
+            }
+        }
+
+        class Seguro implements Tributavel {
+            @Override
+            public double calculaTributos() {
+                return 42;
+            }
+        }
+
+    }
 }
 

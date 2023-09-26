@@ -1,4 +1,6 @@
-package src.aula4;
+package src.aula4.Figuras;
+
+import src.aula4.Figuras.Formas;
 
 //Exercício 02: Figuras geométricas Aula04
 class Quadrado extends Formas {
