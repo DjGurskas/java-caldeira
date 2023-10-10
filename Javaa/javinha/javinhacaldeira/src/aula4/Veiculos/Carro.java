@@ -13,5 +13,5 @@ public class Carro extends Veiculo {
         return distancia * 0.20;
     }
 }
-//@Override” é uma “annotation” que pode ser acrescentada a um método que foi sobreposto.
-//é necessário para estender ou modificar a implementação abstrata. fonts: google
+//@Override” é uma forma de garantir que
+// estamos na verdade sobrescrevendo um método e não criando um novo.
