@@ -12,10 +12,10 @@ public class Exercicio4 {
         this.dataValidade = dataValidade;
     }
 
-    public String getTitulo() {
+    public String getNome() {
         return nome;
     }
-    public String getData() {
+    public String getDataValidade() {
         return dataValidade;
     }
 
@@ -81,13 +81,13 @@ class ListadeCompras {
         listar(listarCompras);
 
         System.out.print("Digite o produto que vai ser removido:  ");
-        int tarefaid = scan.nextInt();
+        int produtoId = scan.nextInt();
 
-        if(tarefaid >= 0 && tarefaid <listarCompras.size()) {
-            Exercicio4 tarefaRemovida = listarCompras.remove(tarefaid);
-            System.out.println("Tarefa removida: " + tarefaRemovida);
+        if(produtoId >= 1 && produtoId <= listarCompras.size()) {
+            Exercicio4 produtoRemovido = listarCompras.remove(produtoId - 1);
+            System.out.println("Tarefa removida: " + produtoRemovido);
         } else {
-            System.out.println("Erro! Nenhuma opção selecionada.");
+            System.out.println("Erro! Número de item inválido.");
         }
     }
 
